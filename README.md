@@ -74,7 +74,7 @@ The dataset was explored using:
 - Missing-value analysis
 - Duplicate-value detection
 
-> 💡 The pair plot showed that the three species form clearly distinguishable clusters, with a small amount of overlap between *Iris-versicolor* and *Iris-virginica* — consistent with the model's performance above.
+> 💡 The pair plot showed that the three species form clearly distinguishable clusters, with a small amount of overlap between *Iris-versicolor* and *Iris-virginica*, consistent with the model's performance above.
 
 ---
 
@@ -131,8 +131,8 @@ iris-flower-classification/
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/Abdullah12-svg/iris-flower-classification.git
-cd iris-flower-classification
+git clone https://github.com/Abdullah12-svg/Iris-flower-classification.git
+cd Iris-flower-classification
 ```
 
 ### 2. Create a virtual environment
@@ -218,4 +218,4 @@ AI Intern @ PK Teams | ML → LangChain, LangGraph, RAG & FastAPI
 
 ## ⭐ Support
 
-If you found this project useful, consider giving it a ⭐ — it helps a lot and keeps me motivated to build more!
+If you found this project useful, consider giving it a ⭐ it helps a lot and keeps me motivated to build more!
