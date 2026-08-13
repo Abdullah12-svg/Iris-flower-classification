@@ -45,7 +45,7 @@ Multiple values of `k` were tested to find the best-performing neighborhood size
 | 9 | 90% |
 | 11 | 90% |
 
-`k=5` was selected as the final model a good balance between accuracy and generalization.
+`k=5` was selected as the final model — a good balance between accuracy and generalization.
 
 ---
 
@@ -74,7 +74,29 @@ The dataset was explored using:
 - Missing-value analysis
 - Duplicate-value detection
 
-> 💡 The pair plot showed that the three species form clearly distinguishable clusters, with a small amount of overlap between *Iris-versicolor* and *Iris-virginica*, consistent with the model's performance above.
+### Class Distribution
+
+The dataset is well balanced across all three species (~50 samples each):
+
+<p align="center">
+  <img src="./assets/countplot.png" alt="Number of flowers by species" width="600">
+</p>
+
+### Feature Correlation
+
+Petal length and petal width are very strongly correlated (0.96), making them the most predictive features for species classification:
+
+<p align="center">
+  <img src="./assets/heatmap.png" alt="Feature correlation heatmap" width="600">
+</p>
+
+### Pairwise Feature Relationships
+
+> 💡 The pair plot shows that the three species form clearly distinguishable clusters especially by petal length and petal width  with a small amount of overlap between *Iris-versicolor* and *Iris-virginica*, consistent with the model's performance above.
+
+<p align="center">
+  <img src="assets\pairplot.png alt="Pairplot of Iris features by species" width="750">
+</p>
 
 ---
 
@@ -95,6 +117,10 @@ The dataset was explored using:
 ## 🌐 Streamlit Application
 
 The project includes an interactive **Streamlit** app where users can input flower measurements and get a live prediction.
+
+<p align="center">
+  <img src="assets/app.png" alt="Iris Flower Classifier Streamlit app" width="450">
+</p>
 
 **Application Flow**
 
@@ -122,7 +148,12 @@ iris-flower-classification/
 ├── IRIS.csv               # Dataset
 ├── requirements.txt      # Project dependencies
 ├── README.md              # Project documentation
-└── .gitignore
+├── .gitignore
+└── assets/                # README screenshots
+    ├── app.png
+    ├── countplot.png
+    ├── heatmap.png
+    └── pairplot.png
 ```
 
 ---
@@ -131,8 +162,8 @@ iris-flower-classification/
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/Abdullah12-svg/Iris-flower-classification.git
-cd Iris-flower-classification
+git clone https://github.com/Abdullah12-svg/iris-flower-classification.git
+cd iris-flower-classification
 ```
 
 ### 2. Create a virtual environment
@@ -198,11 +229,11 @@ Through this project, I practiced:
 ## 🔮 Future Improvements
 
 - [ ] Test additional classification algorithms (SVM, Random Forest, Logistic Regression)
-
-- [ ] Add confusion matrix visualization 
-
+- [ ] Hyperparameter tuning with GridSearchCV
+- [ ] Add confusion matrix visualization
+- [ ] Improve the Streamlit UI/UX
 - [ ] Deploy the application online (Streamlit Community Cloud)
-
+- [ ] Add more advanced model evaluation (ROC curves, cross-validation)
 
 ---
 
@@ -218,4 +249,4 @@ AI Intern @ PK Teams | ML → LangChain, LangGraph, RAG & FastAPI
 
 ## ⭐ Support
 
-If you found this project useful, consider giving it a ⭐ it helps a lot and keeps me motivated to build more!
+If you found this project useful, consider giving it a ⭐ — it helps a lot and keeps me motivated to build more!
